@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css" />
+    <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/img/Black Cat.svg" />
+    <title>Gatomeu</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Inter", "sans-serif";
+      }
+    </style>
+    <header class="navbar navbar-expand-lg bg-orange sticky-top">
+      <div class="container">
+        <a class="me-4" href="/inicial.html"
+          ><img src="img/Black Cat.svg" alt=""
+        /></a>
+        <style>
+          header {
+            background-color: #ffa502;
+          }
+        </style>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <style>
+            .nav-link {
+              font-weight: 700;
+            }
+
+            .nav-link:hover {
+              color: white !important;
+            }
+          </style>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-black" href="inicial.html">Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="racas.html">Raças</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="curiosidades.html"
+                >Curiosidades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="sugestoes.html">Sugestões</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="quiz.html">Quiz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mt-4 justify-content-center align-items-center">
+      <style>
+        .btn {
+          background-color: #ffa502;
+          border-color: #ffa502;
+        }
+        .btn:hover {
+          background-color: #e49400;
+          border-color: #e49400;
+        }
+        .btn:active {
+          background-color: #ffa502 !important;
+          border-color: #ffa502 !important;
+        }
+        .apresentacao h1 {
+          font-size: 64px;
+          font-weight: 600;
+        }
+        .form-check {
+          display: flex;
+          align-items: center;
+          background-color: #ebebeb;
+          border-radius: 10px;
+          padding: 10px;
+        }
+
+        .form-check input[type="radio"],
+        .form-check input[type="checkbox"] {
+          display: none;
+        }
+
+        .form-check label {
+          flex-grow: 1; /* Allow the label to occupy remaining space */
+          background-color: #ebebeb;
+          color: #000000;
+          border-radius: 10px;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        .form-check label:hover {
+          background-color: #ffa502;
+          transition: 1s ease-in-out;
+        }
+
+        .form-check input[type="radio"]:checked + label,
+        .form-check input[type="checkbox"]:checked + label {
+          background-color: #ffa502;
+        }
+      </style>
+      <section class="apresentacao text-center">
+        <h1>Quiz</h1>
+        <div class="card border-0">
+          <div class="card-body">
+            <h2 class="card-title" id="questionTitle"></h2>
+            <p class="card-text bg" id="questionText"></p>
+            <div class="row bg" id="optionsContainer"></div>
+            <div id="resultsPage" class="d-none"></div>
+            <button class="btn btn-primary mt-3" id="submitBtn">
+              Responder
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        const questions = [
+          {
+            title: "Questão 1:",
+            text: "Qual a raça mais famosa?",
+            options: [
+              { text: "Siamês", value: "Siamês" },
+              { text: "Persa", value: "Persa" },
+              { text: "Himalaia", value: "Himalaia" },
+              { text: "Maine Coon", value: "Maine Coon" },
+            ],
+            correctAnswer: "Persa",
+          },
+          {
+            title: "Questão 2:",
+            text: "Qual a cor predominante do gato siamês?",
+            options: [
+              { text: "Branco", value: "Branco" },
+              { text: "Preto", value: "Preto" },
+              { text: "Cinza", value: "Cinza" },
+              { text: "Marrom", value: "Marrom" },
+            ],
+            correctAnswer: "Marrom",
+          },
+          // Add more questions here
+          {
+            title: "Questão 3:",
+            text: "Qual a raça conhecida por sua ausência de pelo?",
+            options: [
+              { text: "Sphynx", value: "Sphynx" },
+              { text: "Persa", value: "Persa" },
+              { text: "Siames", value: "Siames" },
+              { text: "Bengal", value: "Bengal" },
+            ],
+            correctAnswer: "Sphynx",
+          },
+          {
+            title: "Questão 4:",
+            text: "Qual a raça de gato tem as orelhas grandes e pontudas?",
+            options: [
+              { text: "Maine Coon", value: "Maine Coon" },
+              { text: "Scottish Fold", value: "Scottish Fold" },
+              { text: "Ragdoll", value: "Ragdoll" },
+              { text: "Siberian", value: "Siberian" },
+            ],
+            correctAnswer: "Scottish Fold",
+          },
+          {
+            title: "Questão 5:",
+            text: "Qual a raça conhecida por sua pelagem de duas cores bem definidas?",
+            options: [
+              { text: "British Shorthair", value: "British Shorthair" },
+              { text: "Maine Coon", value: "Maine Coon" },
+              { text: "Turkish Van", value: "Turkish Van" },
+              { text: "Norwegian Forest", value: "Norwegian Forest" },
+            ],
+            correctAnswer: "Turkish Van",
+          },
+          {
+            title: "Questão 6:",
+            text: "Qual a raça de gato é originária do Egito?",
+            options: [
+              { text: "Siamês", value: "Siamês" },
+              { text: "Burmese", value: "Burmese" },
+              { text: "Egyptian Mau", value: "Egyptian Mau" },
+              { text: "Russian Blue", value: "Russian Blue" },
+            ],
+            correctAnswer: "Egyptian Mau",
+          },
+          {
+            title: "Questão 7:",
+            text: "Qual a raça de gato é conhecida por ter pelos curtos e olhos azuis intensos?",
+            options: [
+              { text: "British Shorthair", value: "British Shorthair" },
+              { text: "Siames", value: "Siames" },
+              { text: "Russian Blue", value: "Russian Blue" },
+              { text: "Burmese", value: "Burmese" },
+            ],
+            correctAnswer: "Siames",
+          },
+          {
+            title: "Questão 8:",
+            text: "Qual a raça de gato tem uma pelagem extremamente longa e densa?",
+            options: [
+              { text: "Persa", value: "Persa" },
+              { text: "Ragdoll", value: "Ragdoll" },
+              { text: "Siberian", value: "Siberian" },
+              { text: "Maine Coon", value: "Maine Coon" },
+            ],
+            correctAnswer: "Maine Coon",
+          },
+          // Add more questions here
+          {
+            title: "Questão 9:",
+            text: "Qual a raça de gato é conhecida por ter um comportamento semelhante a um cachorro?",
+            options: [
+              { text: "Maine Coon", value: "Maine Coon" },
+              { text: "Ragdoll", value: "Ragdoll" },
+              { text: "Burmese", value: "Burmese" },
+              { text: "Abyssinian", value: "Abyssinian" },
+            ],
+            correctAnswer: "Ragdoll",
+          },
+          {
+            title: "Questão 10:",
+            text: "Qual a raça de gato é conhecida por sua aparência selvagem, semelhante a um leopardo?",
+            options: [
+              { text: "Bengal", value: "Bengal" },
+              { text: "Sphynx", value: "Sphynx" },
+              { text: "Scottish Fold", value: "Scottish Fold" },
+              { text: "Persa", value: "Persa" },
+            ],
+            correctAnswer: "Bengal",
+          },
+        ];
+
+        let currentQuestionIndex = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+
+        function showQuestion(questionIndex) {
+          const question = questions[questionIndex];
+
+          document.getElementById("questionTitle").textContent = question.title;
+          document.getElementById("questionText").textContent = question.text;
+
+          const optionsContainer = document.getElementById("optionsContainer");
+          optionsContainer.innerHTML = "";
+
+          question.options.forEach((option, index) => {
+            const optionDiv = document.createElement("div");
+            optionDiv.className = "col-md-6";
+
+            const formCheck = document.createElement("div");
+            formCheck.className = "form-check";
+
+            const input = document.createElement("input");
+            input.className = "form-check-input";
+            input.type = "radio";
+            input.name = "q" + questionIndex;
+            input.id = "option" + index;
+            input.value = option.value;
+
+            const label = document.createElement("label");
+            label.className = "form-check-label";
+            label.htmlFor = "option" + index;
+            label.textContent = option.text;
+
+            formCheck.appendChild(input);
+            formCheck.appendChild(label);
+            optionDiv.appendChild(formCheck);
+            optionsContainer.appendChild(optionDiv);
+          });
+        }
+
+        function checkAnswer() {
+          const selectedOption = document.querySelector(
+            'input[name="q' + currentQuestionIndex + '"]:checked'
+          );
+
+          if (selectedOption) {
+            const selectedValue = selectedOption.value;
+            const currentQuestion = questions[currentQuestionIndex];
+
+            if (selectedValue === currentQuestion.correctAnswer) {
+              correctAnswers++;
+            } else {
+              wrongAnswers++;
+            }
+
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+              showQuestion(currentQuestionIndex);
+            } else {
+              displayResults();
+            }
+          } else {
+            alert("Selecione uma resposta.");
+          }
+        }
+
+        function displayResults() {
+          const quizSection = document.querySelector(".card.border-0");
+          quizSection.classList.add("d-none");
+
+          const resultsPage = document.getElementById("resultsPage");
+          resultsPage.classList.remove("d-none");
+
+          const resultText = document.getElementById("resultText");
+
+          const totalQuestions = questions.length;
+          const correctRatio = (correctAnswers / totalQuestions) * 100;
+          const wrongRatio = (wrongAnswers / totalQuestions) * 100;
+
+          const queryString = `?correct=${correctAnswers}&total=${totalQuestions}&ratio=${correctRatio.toFixed(
+            2
+          )}`;
+          const resultsPageUrl = "resultados.html" + queryString;
+          window.location.href = resultsPageUrl;
+        }
+
+        showQuestion(currentQuestionIndex);
+
+        document
+          .getElementById("submitBtn")
+          .addEventListener("click", checkAnswer);
+      </script>
+    </main>
+    <footer class="card-footer mt-5">
+      <style>
+        .card-footer {
+          background-color: #ebebeb;
+        }
+      </style>
+      <div
+        class="footer-content d-flex align-items-center justify-content-between"
+      >
+        <p class="text-black m-0 ms-5">Copyright 2023 Gatomeu</p>
+        <img src="/img/Black Cat.svg" alt="" class="footer-image me-5" />
+      </div>
+    </footer>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1;
+      }
+    </style>
+  </body>
+</html>
