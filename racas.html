@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css" integrity="sha512-JreNkqx4723Zhvmy8TtRDue2ZbPrPIzJSjK84o3KUsjA/eKuOW3bhea06M8urMlsFS3Yj+9m3OudzqJDrk3yOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <link rel="icon" href="/img/Black Cat.svg">
     <title>Gatomeu</title>
 </head>
@@ -65,20 +66,50 @@
         </header>
         <main class="container mt-5">
           <section class="racas-page">
+            <style>
+              .btn {
+                background-color: #ffa502;
+                border-color: #ffa502;
+              }
+              .btn:hover {
+                background-color: #e49400;
+                border-color: #e49400;
+              }
+              .btn:active {
+                background-color: #ffa502 !important;
+                border-color: #ffa502 !important;
+              }
+            </style>
+            <h1 class="text-center mb-5">Pesquise a sua raça favorita!</h1>
             <div class="search-bar text-center">
-              <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar" data-list="Raça 1, Raça 2, Raça 3, Raça 4">
-              <button class="btn btn-primary">Buscar</button>
+              <div class="input-group">
+                <input type="text" class="form-control" id="searchInput" list="breedList" placeholder="Pesquisar">
+                <datalist id="breedList">
+                  <option value="Persa"></option>
+                  <option value="Siamês"></option>
+                  <option value="Himalaia"></option>
+                  <option value="Ragdoll"></option>
+                </datalist>
+                <button class="btn btn-primary input-group-append" id="searchButton">Ir</button>
+              </div>
             </div>
-            
-            <script>
-              const searchInput = document.getElementById('searchInput');
-              const dataList = ["Raça 1", "Raça 2", "Raça 3", "Raça 4"];
-              new Awesomplete(searchInput, { list: dataList });
-            </script>
-
           </section>
-
         </main>
+        
+        <script>
+          const searchInput = document.getElementById('searchInput');
+          const dataList = document.getElementById('breedList');
+          const availableBreeds = Array.from(dataList.options).map((option) => option.value);
+        
+          const searchButton = document.getElementById('searchButton');
+          searchButton.addEventListener('click', function() {
+            const userInput = searchInput.value;
+            if (userInput === 'Persa') {
+              window.location.href = '/racasarq/raca-persa.html';
+            }
+          });
+        </script>
+        
     <footer class="card-footer mt-5">
       <style>
         .card-footer {
