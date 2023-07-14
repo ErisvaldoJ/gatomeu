@@ -1,115 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css" />
     <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css" integrity="sha512-JreNkqx4723Zhvmy8TtRDue2ZbPrPIzJSjK84o3KUsjA/eKuOW3bhea06M8urMlsFS3Yj+9m3OudzqJDrk3yOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <link rel="icon" href="/img/Black Cat.svg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css"
+      integrity="sha512-JreNkqx4723Zhvmy8TtRDue2ZbPrPIzJSjK84o3KUsjA/eKuOW3bhea06M8urMlsFS3Yj+9m3OudzqJDrk3yOQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
+      integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="icon" href="/img/Black Cat.svg" />
     <title>Gatomeu</title>
-</head>
-<body>
-  <style>
-    body {
-      font-family: "Inter", "sans-serif";
-    }
-  </style>
-        <header class="navbar navbar-expand-lg bg-orange sticky-top">
-          <div class="container">
-            <a class="me-4" href="/inicial.html"><img src="img/Black Cat.svg" alt=""></a>
-            <style>
-              header {
-                background-color: #FFA502;
-              }
-            </style>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Inter", "sans-serif";
+      }
+    </style>
+    <header class="navbar navbar-expand-lg bg-orange sticky-top">
+      <div class="container">
+        <a class="me-4" href="/inicial.html"
+          ><img src="img/Black Cat.svg" alt=""
+        /></a>
+        <style>
+          header {
+            background-color: #ffa502;
+          }
+        </style>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <style>
+            .nav-link {
+              font-weight: 700;
+            }
+
+            .nav-link:hover {
+              color: white !important;
+            }
+          </style>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-black" href="inicial.html">Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="racas.html">Raças</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="curiosidades.html"
+                >Curiosidades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="sugestoes.html">Sugestões</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="quiz.html">Quiz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="container mt-5">
+      <section class="racas-page">
+        <style>
+          .btn {
+            background-color: #ffa502;
+            border-color: #ffa502;
+          }
+          .btn:hover {
+            background-color: #e49400;
+            border-color: #e49400;
+          }
+          .btn:active {
+            background-color: #ffa502 !important;
+            border-color: #ffa502 !important;
+          }
+        </style>
+        <h1 class="text-center mb-5">Pesquise a sua raça favorita!</h1>
+        <div class="search-bar text-center">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="searchInput"
+              list="breedList"
+              placeholder="Pesquisar"
+            />
+            <datalist id="breedList">
+              <option value="Persa"></option>
+              <option value="Siamês"></option>
+              <option value="Himalaia"></option>
+              <option value="Ragdoll"></option>
+            </datalist>
+            <button
+              class="btn btn-primary input-group-append"
+              id="searchButton"
+            >
+              Ir
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <style>
-                .nav-link {
-                  font-weight: 700;
-                }
-  
-                .nav-link:hover {
-                  color: white !important;
-                }
-              </style>
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link text-black" href="inicial.html">Inicial</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black" href="racas.html">Raças</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black" href="curiosidades.html">Curiosidades</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black" href="sugestoes.html">Sugestões</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black" href="quiz.html">Quiz</a>
-                </li>
-              </ul>
+          </div>
+        </div>
+        <p class="text-center mt-5">ou</p>
+        <h1 class="text-center mt-5">Mais pesquisados</h1>
+        <div class="d-flex justify-content-center flex-wrap mt-3">
+          <div class="card m-5" style="width: 18rem;">
+            <img src="/img/download.jpg" class="card-img-top" alt="Image 1">
+            <div class="card-body">
+              <h5 class="card-title">Persa</h5>
+              <p class="card-text">Descrição da Raça 1.</p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
             </div>
           </div>
-        </header>
-        <main class="container mt-5">
-          <section class="racas-page">
-            <style>
-              .btn {
-                background-color: #ffa502;
-                border-color: #ffa502;
-              }
-              .btn:hover {
-                background-color: #e49400;
-                border-color: #e49400;
-              }
-              .btn:active {
-                background-color: #ffa502 !important;
-                border-color: #ffa502 !important;
-              }
-            </style>
-            <h1 class="text-center mb-5">Pesquise a sua raça favorita!</h1>
-            <div class="search-bar text-center">
-              <div class="input-group">
-                <input type="text" class="form-control" id="searchInput" list="breedList" placeholder="Pesquisar">
-                <datalist id="breedList">
-                  <option value="Persa"></option>
-                  <option value="Siamês"></option>
-                  <option value="Himalaia"></option>
-                  <option value="Ragdoll"></option>
-                </datalist>
-                <button class="btn btn-primary input-group-append" id="searchButton">Ir</button>
-              </div>
+        
+          <div class="card m-5" style="width: 18rem;">
+            <img src="/img/download.jpg" class="card-img-top" alt="Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Siamês</h5>
+              <p class="card-text">Descrição da Raça 2.</p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
             </div>
-          </section>
-        </main>
+          </div>
         
-        <script>
-          const searchInput = document.getElementById('searchInput');
-          const dataList = document.getElementById('breedList');
-          const availableBreeds = Array.from(dataList.options).map((option) => option.value);
+          <div class="card m-5" style="width: 18rem;">
+            <img src="/img/download.jpg" class="card-img-top" alt="Image 3">
+            <div class="card-body">
+              <h5 class="card-title">Himalaia</h5>
+              <p class="card-text">Descrição da Raça 3.</p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
         
-          const searchButton = document.getElementById('searchButton');
-          searchButton.addEventListener('click', function() {
-            const userInput = searchInput.value;
-            if (userInput === 'Persa') {
-              window.location.href = '/racasarq/raca-persa.html';
-            }
-          });
-        </script>
-        
+      </section>
+    </main>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const dataList = document.getElementById("breedList");
+      const availableBreeds = Array.from(dataList.options).map(
+        (option) => option.value
+      );
+
+      const searchButton = document.getElementById("searchButton");
+      searchButton.addEventListener("click", function () {
+        const userInput = searchInput.value;
+        if (userInput === "Siamês") {
+          window.location.href = "/racasarq/raca-siames.html";
+        } else if (userInput === "Persa") {
+          window.location.href = "/racasarq/raca-persa.html";
+        }
+      });
+    </script>
+
     <footer class="card-footer mt-5">
       <style>
         .card-footer {
@@ -140,5 +213,5 @@
         flex: 1;
       }
     </style>
-</body>
+  </body>
 </html>
