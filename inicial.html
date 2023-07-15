@@ -24,17 +24,68 @@
       body {
         font-family: "Inter", "sans-serif";
       }
+      .btn {
+        background-color: #ffa502;
+        border-color: #ffa502;
+      }
+      .btn:hover {
+        background-color: #e49400;
+        border-color: #e49400;
+      }
+      .btn:active {
+        background-color: #ffa502 !important;
+        border-color: #ffa502 !important;
+      }
+      header {
+        background-color: #ffa502;
+      }
+      .nav-link {
+        font-weight: 700;
+      }
+
+      .nav-link:hover {
+        color: white !important;
+      }
+      .apresentacao h1 {
+        font-size: 64px;
+        margin: 0;
+        margin-top: 40px;
+        font-weight: 800;
+      }
+      .apresentacao h2 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .row h5 {
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      .row p {
+        font-size: 18px;
+      }
+      .row img {
+        transition: transform 0.2s ease-in-out;
+        max-width: 400px;
+        max-height: 350px;
+      }
+
+      .row img:hover {
+        transform: scale(1.1);
+      }
+      .card-footer {
+        background-color: #ebebeb;
+      }
+      h3 {
+            font-weight: 700;
+            font-size: 32px;
+          }
     </style>
     <header class="navbar navbar-expand-lg bg-orange sticky-top">
       <div class="container">
         <a class="me-4" href="/inicial.html"
           ><img src="img/Black Cat.svg" alt=""
         /></a>
-        <style>
-          header {
-            background-color: #ffa502;
-          }
-        </style>
         <button
           class="navbar-toggler"
           type="button"
@@ -47,15 +98,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <style>
-            .nav-link {
-              font-weight: 700;
-            }
-
-            .nav-link:hover {
-              color: white !important;
-            }
-          </style>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link text-black" href="/inicial.html">Inicial</a>
@@ -90,48 +132,19 @@
           bichano. Navegue através das nossas páginas para saber mais!
         </h2>
       </section>
-      <style>
-        .apresentacao h1 {
-          font-size: 64px;
-          margin: 0;
-          margin-top: 40px;
-          font-weight: 800;
-        }
-        .apresentacao h2 {
-          font-size: 32px;
-          font-weight: 700;
-        }
-      </style>
       <section class="principal mt-5 pt-4 mb-5">
-        <style>
-          .row h5 {
-            font-size: 32px;
-            font-weight: 600;
-          }
-
-          .row p {
-            font-size: 18px;
-          }
-        </style>
         <div class="row">
-          <style>
-            .row img {
-              transition: transform 0.2s ease-in-out;
-            }
-
-            .row img:hover {
-              transform: scale(1.1);
-            }
-          </style>
           <div class="col-md-4">
             <div class="card mb-4 border-0">
-              <img
-                src="/img/persa.png"
-                class="card-img-top mx-auto"
-                alt=""
-              />
+              <img src="/img/persa.png" class="card-img-top mx-auto" alt="" />
               <div class="card-body">
-                <h5 class="card-title">Persa</h5>
+                <h5 class="card-title">
+                  <a
+                    href="racasarq/raca-persa.html"
+                    class="text-decoration-none text-black"
+                    >Persa</a
+                  >
+                </h5>
                 <p class="card-text">
                   O gato persa é conhecido por seu longo e luxuoso pelo e doce
                   disposição. Eles são uma raça popular para aqueles que querem
@@ -142,13 +155,15 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 border-0">
-              <img
-                src="/img/siames.png"
-                class="card-img-top mx-auto"
-                alt=""
-              />
+              <img src="/img/siames.png" class="card-img-top mx-auto" alt="" />
               <div class="card-body">
-                <h5 class="card-title">Siamês</h5>
+                <h5 class="card-title">
+                  <a
+                    href="racasarq/raca-siames.html"
+                    class="text-decoration-none text-black"
+                    >Siamês</a
+                  >
+                </h5>
                 <p class="card-text">
                   O gato siamês é conhecido por seus impressionantes olhos azuis
                   e personalidade. Eles são uma raça popular para aqueles que
@@ -159,11 +174,7 @@
           </div>
           <div class="col-md-4">
             <div class="card mb-4 border-0">
-              <img
-                src="img/himalaia.png"
-                class="card-img-top mx-auto"
-                alt=""
-              />
+              <img src="img/himalaia.png" class="card-img-top mx-auto" alt="" />
               <div class="card-body">
                 <h5 class="card-title">Himalaia</h5>
                 <p class="card-text">
@@ -177,121 +188,117 @@
           </div>
         </div>
       </section>
-      <section id="carouselSection">
+      <section class="container w-100">
         <div
-          id="myCarousel"
-          class="carousel slide mx-auto w-100"
+          id="carouselExampleIndicators"
+          class="carousel slide"
           data-bs-ride="carousel"
         >
-          <ol class="carousel-indicators">
-            <li
-              data-bs-target="#myCarousel"
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="0"
               class="active"
-            ></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner rounded-5 border">
-            <div class="carousel-item active align-items-center">
-              <img
-                src="/img/pexels-tamba-budiarsana-979247.jpg"
-                class="d-flex w-100"
-                alt="Carousel Image 1"
-              />
-            </div>
-            <div class="carousel-item">
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner rounded-5">
+            <div class="carousel-item active">
               <img
                 src="/img/pexels-pixabay-290263.jpg"
-                class="d-flex w-100"
-                alt="Carousel Image 2"
+                class="d-block w-100"
+                alt="..."
               />
             </div>
             <div class="carousel-item">
               <img
-                src="/img/pexels-artem-lysenko-1499344.jpg"
-                class="d-flex w-100"
-                alt="Carousel Image 3"
+                src="img/pexels-artem-lysenko-1499344.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/img/pexels-tamba-budiarsana-979247.jpg"
+                class="d-block w-100"
+                alt="..."
               />
             </div>
           </div>
-          <a
+          <button
             class="carousel-control-prev"
-            href="#myCarousel"
-            role="button"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span
+              class="carousel-control-prev-icon rounded-3"
+              aria-hidden="true"
+            ></span>
             <span class="visually-hidden">Previous</span>
-            <style>
-              .carousel-control-prev-icon {
-                background-color: #ffa502;
-                border-radius: 9px;
-              }
-            </style>
-          </a>
-          <a
+          </button>
+          <button
             class="carousel-control-next"
-            href="#myCarousel"
-            role="button"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <style>
-              .carousel-control-next-icon {
-                background-color: #ffa502;
-                border-radius: 9px;
-              }
-            </style>
             <span class="visually-hidden">Next</span>
-          </a>
+          </button>
         </div>
       </section>
-      <div
-        class="container mt-5 rounded-5 border mx-auto"
-        style="border-radius: 10px; background-color: #ebebeb"
-      >
-        <h3 class="text-center mt-4">
-          Você sabia que os gatos podem produzir mais de 100 sons diferentes?
-        </h3>
-        <style>
-          h3 {
-            font-weight: 700;
-            font-size: 32px;
-          }
-        </style>
-        <p class="text-center" style="font-size: 32px">
-          Os gatos são criaturas muito expressivas e usam suas vozes para
-          comunicar uma variedade de emoções. Quer estejam miando pedindo
-          comida, cantando para um pássaro, trinando para seu humano, ronronando
-          de contentamento ou blefando de relaxamento, os gatos estão sempre
-          tentando nos dizer alguma coisa.
-        </p>
-        <div class="text-center">
-          <style>
-            .btn {
-              background-color: #ffa502;
-              border-color: #ffa502;
-            }
-            .btn:hover {
-              background-color: #e49400;
-              border-color: #e49400;
-            }
-            .btn:active {
-              background-color: #ffa502 !important;
-              border-color: #ffa502 !important;
-            }
-          </style>
-          <a href="curiosidades.html" class="btn btn-primary mb-4">Saiba mais</a>
+      <section>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="container mt-5 rounded-5 border mx-auto" style="border-radius: 10px; background-color: #ebebeb">
+                <h3 class="text-center mt-4">Você sabia que os gatos podem produzir mais de 100 sons diferentes?</h3>
+                <p class="text-center" style="font-size: 32px">
+                  Quer estejam miando pedindo
+                  comida, trinando para seu humano, ronronando
+                  de contentamento, os gatos estão sempre
+                  tentando nos dizer alguma coisa.
+                </p>
+                <div class="text-center">
+                  <style></style>
+                  <a href="curiosidades.html" class="btn btn-primary mb-4"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="container mt-5 rounded-5 border mx-auto" style="border-radius: 10px; background-color: #ebebeb">
+                <h3 class="text-center mt-4">Teste seus conhecimentos sobre os bichanos num quiz!</h3>
+                <p class="text-center" style="font-size: 32px;">Se você acha que sabe tudo sobre os felinos, tente o nosso quiz e comprove se é um verdadeiro amante dos gatos.</p>
+                <div class="text-center">
+                  <style></style>
+                  <a href="quiz.html" class="btn btn-primary mb-4"
+                    >Acessar</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="card-footer mt-5">
-      <style>
-        .card-footer {
-          background-color: #ebebeb;
-        }
-      </style>
       <div
         class="footer-content d-flex align-items-center justify-content-between"
       >
