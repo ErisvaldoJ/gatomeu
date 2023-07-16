@@ -25,17 +25,67 @@
       body {
         font-family: "Inter", "sans-serif";
       }
+      header {
+        background-color: #ffa502;
+      }
+      .nav-link {
+        font-weight: 700;
+      }
+
+      .nav-link:hover {
+        color: white !important;
+        transition: 0.1s ease-in-out;
+      }
+      .card {
+        border-radius: 10px;
+        border-width: 0;
+        background-color: #ebebeb;
+      }
+      .apresentacao h1 {
+        font-weight: 700;
+      }
+      .apresentacao h2 {
+        font-size: 32px;
+      }
+      .row img {
+        border-radius: 20px;
+      }
+
+      .row h3 {
+        font-weight: 600;
+        font-size: 32px;
+      }
+
+      .row p {
+        font-weight: 500;
+        font-size: 24px;
+      }
+
+      .card {
+        margin-bottom: 100px;
+      }
+      .btn {
+        background-color: #ffa502;
+        border-color: #ffa502;
+        transition: 0.2s ease-in-out;
+      }
+      .btn:hover {
+        background-color: #e49400;
+        border-color: #e49400;
+      }
+      .btn:active {
+        background-color: #ffa502 !important;
+        border-color: #ffa502 !important;
+      }
+      .card-footer {
+        background-color: #ebebeb;
+      }
     </style>
     <header class="navbar navbar-expand-lg bg-orange sticky-top">
       <div class="container">
         <a class="me-4" href="/inicial.html"
           ><img src="img/Black Cat.svg" alt=""
         /></a>
-        <style>
-          header {
-            background-color: #ffa502;
-          }
-        </style>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,15 +98,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <style>
-            .nav-link {
-              font-weight: 700;
-            }
-
-            .nav-link:hover {
-              color: white !important;
-            }
-          </style>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link text-black" href="inicial.html">Inicial</a>
@@ -79,14 +120,6 @@
         </div>
       </div>
     </header>
-    <style>
-      .card {
-        border-radius: 10px;
-        border-width: 0;
-        background-color: #ebebeb;
-      }
-    </style>
-
     <main class="container mt-5">
       <section class="apresentacao text-center mb-5">
         <h1 class="mb-2">CURIOSIDADES</h1>
@@ -96,35 +129,8 @@
           criaturas misteriosas.
         </h2>
       </section>
-      <style>
-        .apresentacao h1 {
-          font-weight: 700;
-        }
-        .apresentacao h2 {
-          font-size: 32px;
-        }
-      </style>
       <section class="curiosidades">
         <div class="container">
-          <style>
-            .row img {
-              border-radius: 20px;
-            }
-
-            .row h3 {
-              font-weight: 600;
-              font-size: 32px;
-            }
-
-            .row p {
-              font-weight: 500;
-              font-size: 24px;
-            }
-
-            .card {
-              margin-bottom: 100px;
-            }
-          </style>
           <div class="card">
             <div class="card-body">
               <div class="row">
@@ -297,20 +303,6 @@
           </div>
         </div>
         <div class="text-center">
-          <style>
-            .btn {
-              background-color: #ffa502;
-              border-color: #ffa502;
-            }
-            .btn:hover {
-              background-color: #e49400;
-              border-color: #e49400;
-            }
-            .btn:active {
-              background-color: #ffa502 !important;
-              border-color: #ffa502 !important;
-            }
-          </style>
           <button id="toggleButton" class="btn btn-primary" type="button">
             Mostrar mais
           </button>
@@ -337,11 +329,6 @@
       </section>
     </main>
     <footer class="card-footer mt-5">
-      <style>
-        .card-footer {
-          background-color: #ebebeb;
-        }
-      </style>
       <div
         class="footer-content d-flex align-items-center justify-content-between"
       >
