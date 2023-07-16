@@ -34,71 +34,20 @@
       main {
         flex: 1;
       }
-    </style>
-  </head>
-  <body>
-    <style>
       body {
         font-family: "Inter", "sans-serif";
       }
-    </style>
-    <header class="navbar navbar-expand-lg bg-orange sticky-top">
-      <div class="container">
-        <a class="me-4" href="/inicial.html"
-          ><img src="img/Black Cat.svg" alt=""
-        /></a>
-        <style>
-          header {
+      header {
             background-color: #ffa502;
           }
-        </style>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <style>
-            .nav-link {
+          .nav-link {
               font-weight: 700;
             }
 
             .nav-link:hover {
               color: white !important;
             }
-          </style>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link text-black" href="inicial.html">Inicial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="racas.html">Raças</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="curiosidades.html"
-                >Curiosidades</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="sugestoes.html">Sugestões</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="quiz.html">Quiz</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <main class="container mt-4 justify-content-center align-items-center">
-      <style>
-        .btn {
+            .btn {
           background-color: #ffa502;
           border-color: #ffa502;
         }
@@ -128,7 +77,7 @@
         }
 
         .form-check label {
-          flex-grow: 1; /* Allow the label to occupy remaining space */
+          flex-grow: 1;
           background-color: #ebebeb;
           color: #000000;
           border-radius: 10px;
@@ -145,7 +94,52 @@
         .form-check input[type="checkbox"]:checked + label {
           background-color: #ffa502;
         }
-      </style>
+        .card-footer {
+          background-color: #ebebeb;
+        }
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bg-orange sticky-top">
+      <div class="container">
+        <a class="me-4" href="/inicial.html"
+          ><img src="img/Black Cat.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-black" href="inicial.html">Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="racas.html">Raças</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="curiosidades.html"
+                >Curiosidades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="sugestoes.html">Sugestões</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="quiz.html">Quiz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="container mt-4 justify-content-center align-items-center">
       <section class="apresentacao text-center">
         <h1>Quiz</h1>
         <div class="card border-0">
@@ -185,7 +179,6 @@
             ],
             correctAnswer: "Marrom",
           },
-          // Add more questions here
           {
             title: "Questão 3:",
             text: "Qual a raça conhecida por sua ausência de pelo?",
@@ -208,6 +201,7 @@
             ],
             correctAnswer: "Scottish Fold",
           },
+          // --
           {
             title: "Questão 5:",
             text: "Qual a raça conhecida por sua pelagem de duas cores bem definidas?",
@@ -218,62 +212,6 @@
               { text: "Norwegian Forest", value: "Norwegian Forest" },
             ],
             correctAnswer: "Turkish Van",
-          },
-          {
-            title: "Questão 6:",
-            text: "Qual a raça de gato é originária do Egito?",
-            options: [
-              { text: "Siamês", value: "Siamês" },
-              { text: "Burmese", value: "Burmese" },
-              { text: "Egyptian Mau", value: "Egyptian Mau" },
-              { text: "Russian Blue", value: "Russian Blue" },
-            ],
-            correctAnswer: "Egyptian Mau",
-          },
-          {
-            title: "Questão 7:",
-            text: "Qual a raça de gato é conhecida por ter pelos curtos e olhos azuis intensos?",
-            options: [
-              { text: "British Shorthair", value: "British Shorthair" },
-              { text: "Siames", value: "Siames" },
-              { text: "Russian Blue", value: "Russian Blue" },
-              { text: "Burmese", value: "Burmese" },
-            ],
-            correctAnswer: "Siames",
-          },
-          {
-            title: "Questão 8:",
-            text: "Qual a raça de gato tem uma pelagem extremamente longa e densa?",
-            options: [
-              { text: "Persa", value: "Persa" },
-              { text: "Ragdoll", value: "Ragdoll" },
-              { text: "Siberian", value: "Siberian" },
-              { text: "Maine Coon", value: "Maine Coon" },
-            ],
-            correctAnswer: "Maine Coon",
-          },
-          // Add more questions here
-          {
-            title: "Questão 9:",
-            text: "Qual a raça de gato é conhecida por ter um comportamento semelhante a um cachorro?",
-            options: [
-              { text: "Maine Coon", value: "Maine Coon" },
-              { text: "Ragdoll", value: "Ragdoll" },
-              { text: "Burmese", value: "Burmese" },
-              { text: "Abyssinian", value: "Abyssinian" },
-            ],
-            correctAnswer: "Ragdoll",
-          },
-          {
-            title: "Questão 10:",
-            text: "Qual a raça de gato é conhecida por sua aparência selvagem, semelhante a um leopardo?",
-            options: [
-              { text: "Bengal", value: "Bengal" },
-              { text: "Sphynx", value: "Sphynx" },
-              { text: "Scottish Fold", value: "Scottish Fold" },
-              { text: "Persa", value: "Persa" },
-            ],
-            correctAnswer: "Bengal",
           },
         ];
 
@@ -371,11 +309,6 @@
       </script>
     </main>
     <footer class="card-footer mt-5">
-      <style>
-        .card-footer {
-          background-color: #ebebeb;
-        }
-      </style>
       <div
         class="footer-content d-flex align-items-center justify-content-between"
       >
