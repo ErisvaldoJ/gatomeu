@@ -24,17 +24,34 @@
       body {
         font-family: "Inter", "sans-serif";
       }
+      header {
+        background-color: #ffa502;
+      }
+      .nav-link {
+        font-weight: 700;
+      }
+
+      .nav-link:hover {
+        color: white !important;
+      }
+      .card-footer {
+        background-color: #ebebeb;
+      }
+      h1 {
+        font-size: 64px;
+      }
+      #resultText {
+        font-size: 32px;
+      }
+      #ratioText {
+        font-size: 24px;
+      }
     </style>
     <header class="navbar navbar-expand-lg bg-orange sticky-top">
       <div class="container">
         <a class="me-4" href="/inicial.html"
           ><img src="img/Black Cat.svg" alt=""
         /></a>
-        <style>
-          header {
-            background-color: #ffa502;
-          }
-        </style>
         <button
           class="navbar-toggler"
           type="button"
@@ -47,15 +64,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <style>
-            .nav-link {
-              font-weight: 700;
-            }
-
-            .nav-link:hover {
-              color: white !important;
-            }
-          </style>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link text-black" href="inicial.html">Inicial</a>
@@ -79,35 +87,29 @@
       </div>
     </header>
     <div class="text-center mt-5">
-    <h1>Resultados</h1>
-    <div id="resultText"></div>
-    <div id="ratioText"></div>
+      <h1>Resultados</h1>
+      <div id="resultText"></div>
+      <div id="ratioText"></div>
     </div>
     <script>
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      const correctAnswers = urlParams.get('correct');
-      const totalQuestions = urlParams.get('total');
-      const correctRatio = urlParams.get('ratio');
-
-      const resultText = document.getElementById("resultText");
-      resultText.textContent = `Você acertou ${correctAnswers} de ${totalQuestions} questões.`;
-
+      const correctAnswers = urlParams.get("correct");
+      const totalQuestions = urlParams.get("total");
+      const correctRatio = urlParams.get("ratio");
       const ratioText = document.getElementById("ratioText");
-      ratioText.textContent = `Porcentagem de acertos: ${correctRatio}%.`;
+      const resultText = document.getElementById("resultText");
+
+      resultText.textContent = `Você acertou ${correctAnswers} de ${totalQuestions} questões.`;
+      ratioText.textContent = `(${correctRatio}%.)`;
     </script>
-        <footer class="card-footer mt-5 fixed-bottom">
-          <style>
-            .card-footer {
-              background-color: #ebebeb;
-            }
-          </style>
-          <div
-            class="footer-content d-flex align-items-center justify-content-between"
-          >
-            <p class="text-black m-0 ms-5">Copyright 2023 Gatomeu</p>
-            <img src="/img/Black Cat.svg" alt="" class="footer-image me-5" />
-          </div>
-        </footer>
+    <footer class="card-footer mt-5 fixed-bottom">
+      <div
+        class="footer-content d-flex align-items-center justify-content-between"
+      >
+        <p class="text-black m-0 ms-5">Copyright 2023 Gatomeu</p>
+        <img src="/img/Black Cat.svg" alt="" class="footer-image me-5" />
+      </div>
+    </footer>
   </body>
 </html>
