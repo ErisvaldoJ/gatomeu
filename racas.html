@@ -7,43 +7,30 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css" integrity="sha512-JreNkqx4723Zhvmy8TtRDue2ZbPrPIzJSjK84o3KUsjA/eKuOW3bhea06M8urMlsFS3Yj+9m3OudzqJDrk3yOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css"
+      integrity="sha512-JreNkqx4723Zhvmy8TtRDue2ZbPrPIzJSjK84o3KUsjA/eKuOW3bhea06M8urMlsFS3Yj+9m3OudzqJDrk3yOQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"
+      integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="icon" href="/img/Black Cat.svg" />
     <title>Gatomeu</title>
     <style>
-      body {
-        font-family: "Inter", "sans-serif";
-      }
-      header {
-        background-color: #ffa502;
-      }
-      .nav-link {
-        font-weight: 700;
-      }
-      .nav-link:hover {
-        color: white !important;
-      }
-      .btn {
-        background-color: #ffa502;
-        border-color: #ffa502;
-      }
-      .btn:hover {
-        background-color: #e49400;
-        border-color: #e49400;
-      }
-      .btn:active {
-        background-color: #ffa502 !important;
-        border-color: #ffa502 !important;
-      }
-      .card-footer {
-        background-color: #ebebeb;
-      }
       html,
       body {
         height: 100%;
@@ -56,6 +43,38 @@
       }
       main {
         flex: 1;
+      }
+      body {
+        font-family: "Inter", "sans-serif";
+      }
+      header {
+        background-color: #ffa502;
+      }
+      .nav-link {
+        font-weight: 700;
+        transition: 0.1s ease-in-out;
+      }
+      .nav-link:hover {
+        color: white !important;
+      }
+      .btn {
+        background-color: #ffa502;
+        border-color: #ffa502;
+        transition: 0.2s ease-in-out;
+      }
+      .btn:hover {
+        background-color: #e49400;
+        border-color: #e49400;
+      }
+      .btn:active {
+        background-color: #ffa502 !important;
+        border-color: #ffa502 !important;
+      }
+      h1 {
+        font-size: 64px;
+      }
+      .card-footer {
+        background-color: #ebebeb;
       }
     </style>
   </head>
@@ -117,7 +136,10 @@
               <option value="Himalaia"></option>
               <option value="Ragdoll"></option>
             </datalist>
-            <button class="btn btn-primary input-group-append" id="searchButton">
+            <button
+              class="btn btn-primary input-group-append"
+              id="searchButton"
+            >
               Ir
             </button>
           </div>
@@ -125,35 +147,37 @@
         <p class="text-center mt-5">ou</p>
         <h1 class="text-center mt-5">Mais pesquisados</h1>
         <div class="d-flex justify-content-center flex-wrap mt-3">
-          <div class="card m-5" style="width: 18rem;">
-            <img src="/img/download.jpg" class="card-img-top" alt="Image 1">
+          <div class="card m-5" style="width: 18rem">
+            <img src="/img/persaracas.jpg" class="card-img-top" alt="Image 1" />
             <div class="card-body">
-              <h5 class="card-title">Persa</h5>
-              <p class="card-text">Descrição da Raça 1.</p>
-              <a href="#" class="btn btn-primary">Saiba mais</a>
+              <h5 class="card-title text-center">Persa</h5>
+
+              <a href="racasarq/raca-persa.html" class="btn btn-primary mt-3 d-grid">Saiba mais</a>
             </div>
           </div>
-          <div class="card m-5" style="width: 18rem;">
-            <img src="/img/download.jpg" class="card-img-top" alt="Image 2">
+          <div class="card m-5" style="width: 18rem">
+            <img src="/img/siamesracas.jpeg" class="card-img-top" alt="Image 2" />
             <div class="card-body">
-              <h5 class="card-title">Siamês</h5>
-              <p class="card-text">Descrição da Raça 2.</p>
-              <a href="#" class="btn btn-primary">Saiba mais</a>
+              <h5 class="card-title text-center">Siamês</h5>
+
+              <a href="racasarq/raca-siames.html" class="btn btn-primary d-grid">Saiba mais</a>
             </div>
           </div>
-          <div class="card m-5" style="width: 18rem;">
-            <img src="/img/download.jpg" class="card-img-top" alt="Image 3">
+          <div class="card m-5" style="width: 18rem">
+            <img src="/img/himalaiaracas.jpg" class="card-img-top" alt="Image 3" />
             <div class="card-body">
-              <h5 class="card-title">Himalaia</h5>
-              <p class="card-text">Descrição da Raça 3.</p>
-              <a href="#" class="btn btn-primary">Saiba mais</a>
+              <h5 class="card-title text-center">Himalaia</h5>
+
+              <a href="#" class="btn btn-primary d-grid">Saiba mais</a>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="card-footer mt-5">
-      <div class="footer-content d-flex align-items-center justify-content-between">
+      <div
+        class="footer-content d-flex align-items-center justify-content-between"
+      >
         <p class="text-black m-0 ms-5">Copyright 2023 Gatomeu</p>
         <img src="/img/Black Cat.svg" alt="" class="footer-image me-5" />
       </div>
@@ -161,7 +185,9 @@
     <script>
       const searchInput = document.getElementById("searchInput");
       const dataList = document.getElementById("breedList");
-      const availableBreeds = Array.from(dataList.options).map((option) => option.value);
+      const availableBreeds = Array.from(dataList.options).map(
+        (option) => option.value
+      );
       const searchButton = document.getElementById("searchButton");
       searchButton.addEventListener("click", function () {
         const userInput = searchInput.value;
