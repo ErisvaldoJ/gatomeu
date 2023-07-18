@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css" />
+    <script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" href="img/Black Cat.svg" />
+    <title>Gatomeu</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      header {
+        background-color: #ffa502;
+      }
+
+      .nav-link {
+        font-weight: 700;
+        transition: 0.1s ease-in-out;
+      }
+      .nav-link:hover {
+        color: white !important;
+      }
+
+      .race-section {
+        padding: 50px;
+      }
+
+      .white-background {
+        background-color: white;
+      }
+
+      .orange-background {
+        background-color: #ffa502;
+      }
+
+      .content p {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .sec2 h1 {
+        margin: 0;
+        font-size: 5vw;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      .sec1 h1 {
+        margin: 0;
+        font-size: 64px;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      .sec2 p {
+        font-size: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #000000;
+      }
+
+      .box {
+        background-color: #ffa502;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        margin-bottom: 20px;
+        margin: 50px;
+      }
+
+      .number {
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600;
+      }
+
+      .text-outside {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        color: #000000;
+      }
+
+      .text-inside {
+        font-size: 24px;
+        color: #000000;
+        text-align: center;
+      }
+
+      .card-footer {
+        background-color: #ebebeb;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bg-orange sticky-top">
+      <div class="container">
+        <a class="me-4" href="inicial.html"
+          ><img src="img/Black Cat.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-black" href="inicial.html">Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="racas.html">Raças</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="curiosidades.html"
+                >Curiosidades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="sugestoes.html"
+                >Sugestões</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="quiz.html">Quiz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="race-section sec1 white-background">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="content">
+                <p>Gato</p>
+                <h1>PERSA</h1>
+                <p>
+                  O gato persa é uma raça de felino conhecida por sua beleza e
+                  elegância. Com sua pelagem longa e exuberante, os gatos persas
+                  são verdadeiras bolas de pelo. Seus olhos grandes e
+                  expressivos cativam os amantes de gatos ao redor do mundo.
+                  Além de sua aparência deslumbrante, os gatos persas são
+                  conhecidos por sua personalidade tranquila e afetuosa. Eles
+                  são calmos e gostam de momentos de tranquilidade, sendo ótimos
+                  companheiros para ambientes mais serenos. Os persas apreciam a
+                  companhia dos seus donos, mas também são independentes e sabem
+                  como se entreter sozinhos. Sua natureza calma e amorosa
+                  os torna excelentes animais de estimação para famílias e
+                  pessoas que buscam um companheiro leal e de personalidade
+                  suave.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="img/persatrans.png"
+                alt="Cat Image"
+                class="w-75 h-100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="race-section sec2 orange-background">
+        <div class="content">
+          <h1 class="mb-5 text-center">CARACTERISTICAS</h1>
+          <p>Pelagem longa e exuberante.</p>
+          <p>Personalidade tranquila e afetuosa.</p>
+          <p>Olhos grandes e expressivos.</p>
+          <p>Requer cuidados regulares de higiene.</p>
+          <p>Companheiro leal e sereno.</p>
+        </div>
+      </section>
+      <section class="race-section sec3 white-background">
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="text-outside">Expectativa de vida</div>
+                <div class="box">
+                  <div class="number">10</div>
+                  <div class="text-inside">anos</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="text-outside">Peso médio</div>
+                <div class="box">
+                  <div class="number">6</div>
+                  <div class="text-inside">kilos</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="text-outside">Raridade</div>
+                <div class="box">
+                  <div class="number">7</div>
+                  <div class="text-inside">raro</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="card-footer">
+      <div class="footer-content d-flex align-items-center justify-content-between">
+        <p class="text-black m-0 ms-5">Copyright 2023 Gatomeu</p>
+        <img src="img/Black Cat.svg" alt="" class="footer-image me-5" />
+      </div>
+    </footer>
+  </body>
+</html>
