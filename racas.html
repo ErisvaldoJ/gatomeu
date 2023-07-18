@@ -40,12 +40,11 @@
       body {
         display: flex;
         flex-direction: column;
+        color: #000000;
+        font-family: "Inter", "sans-serif";
       }
       main {
         flex: 1;
-      }
-      body {
-        font-family: "Inter", "sans-serif";
       }
       header {
         background-color: #ffa502;
@@ -153,7 +152,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">Persa</h5>
 
-              <a href="racasarq/raca-persa.html" class="btn btn-primary mt-3 d-grid">Saiba mais</a>
+              <a href="raca-persa.html" class="btn btn-primary mt-3 d-grid">Saiba mais</a>
             </div>
           </div>
           <div class="card m-5" style="width: 18rem">
@@ -161,7 +160,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">Siamês</h5>
 
-              <a href="racasarq/raca-siames.html" class="btn btn-primary d-grid">Saiba mais</a>
+              <a href="raca-siames.html" class="btn btn-primary d-grid">Saiba mais</a>
             </div>
           </div>
           <div class="card m-5" style="width: 18rem">
@@ -193,9 +192,9 @@
       searchButton.addEventListener("click", function () {
         const userInput = searchInput.value;
         if (userInput === "Siamês") {
-          window.location.href = "/racasarq/raca-siames.html";
+          window.location.href = "raca-siames.html";
         } else if (userInput === "Persa") {
-          window.location.href = "/racasarq/raca-persa.html";
+          window.location.href = "raca-persa.html";
         }
       });
     </script>
