@@ -132,7 +132,7 @@
 
       <section class="form-container mt-4 d-flex justify-content-center align-items-center">
         <div class="w-50 text-center">
-          <form action="send_email.php" method="POST">
+          <form id="contactForm" method="POST">
             <div class="row mb-2">
               <div class="col">
                 <input type="text" class="form-control" name="firstName" placeholder="Nome" required />
@@ -145,7 +145,7 @@
               <input type="email" class="form-control" name="email" placeholder="Digite seu email" required />
             </div>
             <div class="mb-2">
-              <input type="text" class="form-control" name="subject" placeholder="Digite o assunto" />
+              <input type="text" class="form-control" name="subject" placeholder="Digite o assunto" required />
             </div>
             <div class="mb-2">
               <textarea class="form-control" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
@@ -163,5 +163,33 @@
         <img src="img/Black Cat.svg" alt="" class="footer-image me-5" />
       </div>
     </footer>
+    <script>
+      const form = document.getElementById("contactForm");
+    
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        const formData = new FormData(form);
+        const url = "https://formspree.io/f/mgejvabz";
+    
+        fetch(url, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            alert("Formulário enviado com sucesso!");
+          })
+          .catch((error) => {
+            console.error(error);
+            alert("Erro ao enviar o formulário. Por favor, tente novamente mais tarde.");
+          });
+      });
+    </script>
+    
   </body>
 </html>
