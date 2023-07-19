@@ -58,6 +58,9 @@
       #ratioText {
         font-size: 24px;
       }
+      #message {
+        font-size: 20px;
+      }
     </style>
     <header class="navbar navbar-expand-lg bg-orange sticky-top">
       <div class="container">
@@ -101,20 +104,32 @@
     <div class="text-center mt-5">
       <h1>Resultados</h1>
       <div id="resultText"></div>
-      <div id="ratioText"></div>
+      <div id="message"></div>
     </div>
+
     <script>
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const correctAnswers = urlParams.get("correct");
       const totalQuestions = urlParams.get("total");
       const correctRatio = urlParams.get("ratio");
-      const ratioText = document.getElementById("ratioText");
       const resultText = document.getElementById("resultText");
+      const messageDiv = document.getElementById("message");
 
       resultText.textContent = `Você acertou ${correctAnswers} de ${totalQuestions} questões.`;
-      ratioText.textContent = `(${correctRatio}%.)`;
+
+      // Criando a mensagem com a porcentagem e definindo o conteúdo da <div id="message">
+      const message =
+        correctAnswers == totalQuestions
+          ? "Parabéns! Você acertou todas as questões. Excelente conhecimento sobre gatos!"
+          : correctAnswers >= totalQuestions / 2
+          ? "Bom trabalho! Você acertou mais da metade das questões. Continue aprendendo sobre gatos!"
+          : "Não desanime! Estude mais sobre gatos e tente novamente!";
+
+      const messageWithRatio = message + ` (${correctRatio}%).`;
+      messageDiv.textContent = messageWithRatio;
     </script>
+
     <footer class="card-footer mt-5 fixed-bottom">
       <div
         class="footer-content d-flex align-items-center justify-content-between"
